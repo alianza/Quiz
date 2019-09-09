@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Quiz</string>
-    <string name="instructionsTitle">Quiz Instructions</string>
-    <string name="instructionsText">Swipe left for true, right for false.\nClick on the question for answer</string>
+    <string name="instructions_title">Quiz Instructions</string>
+    <string name="instructions_text">Swipe left for true, right for false.\nClick on the question for answer</string>
+    <string name="correct_false">Correct! the answer was false.</string>
+    <string name="incorrect_true">Correct! the answer was true.</string>
+    <string name="incorrect">Incorrect, try again!</string>
 </resources>

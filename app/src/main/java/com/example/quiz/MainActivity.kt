@@ -48,21 +48,20 @@ class MainActivity : AppCompatActivity() {
             // Callback triggered when a user swiped an item.
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
-                println("direction: $direction")
                 questionAdapter.notifyItemChanged(position)
 
 //                Left swipe for false, Right for true
                 if (direction == ItemTouchHelper.RIGHT) {
                     if (!questions[position].answer) {
-                        Snackbar.make(rvQuestions, "Correct! the answer was false.", Snackbar.LENGTH_SHORT).show()
+                        Snackbar.make(rvQuestions, R.string.correct_false, Snackbar.LENGTH_SHORT).show()
                     } else {
-                        Snackbar.make(rvQuestions, "Incorrect! the answer was false.", Snackbar.LENGTH_SHORT).show()
+                        Snackbar.make(rvQuestions, R.string.incorrect, Snackbar.LENGTH_SHORT).show()
                     }
                 } else {
                     if (questions[position].answer) {
-                        Snackbar.make(rvQuestions, "Correct! the answer was true.", Snackbar.LENGTH_SHORT).show()
+                        Snackbar.make(rvQuestions, R.string.incorrect_true, Snackbar.LENGTH_SHORT).show()
                     } else {
-                        Snackbar.make(rvQuestions, "Incorrect! the answer was true.", Snackbar.LENGTH_SHORT).show()
+                        Snackbar.make(rvQuestions, R.string.incorrect, Snackbar.LENGTH_SHORT).show()
                     }
                 }
             }
